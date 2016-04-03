@@ -1,27 +1,22 @@
-<h1>Listing comments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.body %></td>
-        <td><%= link_to 'Show', post_comment_path(@post, comment) %></td>
-        <td><%= link_to 'Edit', edit_post_comment_path(@post, comment) %></td>
-        <td><%= link_to 'Destroy', [@post, comment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Comment', new_post_comment_path(@post) %>
+<div ng-app="KambdaApp" ng-controller="CommentsCtrl">
+  <h1>Listing comments</h1>
+  <table>
+	<thead>
+	<tr>
+	  <th>Body</th>
+	  <th></th>
+	  <th></th>
+	  <th></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="comment in comments">
+	  <td>{{comment.body}}</td>
+	  <td><a href="{{comment.url}}">Show</a></td>
+	  <td><a href="{{comment.editUrl}}">Edit</a></td>
+	  <td><a href="#" data-no-turbolink ng-click="deleteComment(comment)">Delete</a></td>
+	</tr>
+	</tbody>
+  </table>
+  <a href="{{newCommentUrl}}">Add Comment</a>
+</div>
