@@ -1,6 +1,6 @@
 Rails4Mongoid::Application.routes.draw do
 
-  root to: 'posts#index'
+  root to: 'users#index'
 
   resources :users
   resources :posts do

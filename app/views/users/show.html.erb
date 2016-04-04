@@ -14,7 +14,7 @@
 
 <p>
   <strong>Is admin:</strong>
-  <%= @user.is_admin %>
+  <%= yes_or_no @user.is_admin %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

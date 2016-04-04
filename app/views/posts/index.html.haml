@@ -16,7 +16,7 @@
       %tr
         %td= post.title
         %td= post.body
-        %td= post.starred
+        %td= yes_or_no post.starred
         %td= post.user
         %td= link_to "Comments (#{post.comments.count})", post_comments_path(post)
         %td= link_to 'Show', post
