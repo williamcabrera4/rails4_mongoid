@@ -35,8 +35,9 @@ gem 'bson_ext', '~> 1.8.6'
 # HAML Templates
 gem 'haml'
 
-# Angular JS
+# Angular JS and Angular UI
 gem 'angularjs-rails'
+gem 'angular-ui-bootstrap-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

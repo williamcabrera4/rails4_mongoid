@@ -1,5 +1,6 @@
 %h1 Listing posts
-%table
+= link_to 'New Post', new_post_path, class: 'btn btn-primary'
+%table.table.table-stripe
   %thead
     %tr
       %th Title
@@ -14,7 +15,7 @@
         %td= post.title
         %td= post.body
         %td= post.starred
+        %td= link_to "Comments (#{post.comments.count})", post_comments_path(post)
         %td= link_to 'Show', post
         %td= link_to 'Edit', edit_post_path(post)
         %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-= link_to 'New Post', new_post_path
