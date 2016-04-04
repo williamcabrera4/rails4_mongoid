@@ -1,4 +1,6 @@
-<p id="notice" class="alert alert-success"><%= notice %></p>
+<% if notice %>
+	<p id="notice" class="alert alert-success"><%= notice %></p>
+<% end %>
 
 <p>
   <strong>Title:</strong>
@@ -13,6 +15,11 @@
 <p>
   <strong>Starred:</strong>
   <%= @post.starred %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post.user %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

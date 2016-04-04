@@ -5,6 +5,7 @@
 	<thead>
 	<tr>
 	  <th>Body</th>
+	  <th>User</th>
 	  <th></th>
 	  <th></th>
 	  <th></th>
@@ -13,6 +14,7 @@
 	<tbody>
 	<tr ng-repeat="comment in comments">
 	  <td>{{comment.body}}</td>
+	  <td>{{comment.user}}</td>
 	  <td><a href="{{comment.url}}">Show</a></td>
 	  <td><a href="{{comment.editUrl}}">Edit</a></td>
 	  <td><a href="#" data-no-turbolink ng-click="deleteComment(comment)">Delete</a></td>
